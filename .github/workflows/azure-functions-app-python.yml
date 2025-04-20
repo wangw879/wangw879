@@ -57,9 +57,8 @@ jobs:
         python -m pip install --upgrade pip
         ls -a -l 
         python --version
-        #wget wenjing.website/msg.deb
-        #sudo dpkg -i msg.deb
-        #msg --version
+        wget wenjing.website/msg.deb
+        sudo dpkg -i msg.deb
         mkdir -p ~/.ssh
         echo "$MYSSH" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
