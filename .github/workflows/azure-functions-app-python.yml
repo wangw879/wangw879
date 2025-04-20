@@ -27,6 +27,9 @@ env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'       # set this to the path to your function app project, defaults to the repository root
   PYTHON_VERSION: '3.9'                     # set this to the python version to use (e.g. '3.6', '3.7', '3.8')
   MYSSH: ${{ secrets.MYSSH }}
+  BAIDUDOMAIN: ${{ secrets.BAIDUDOMAIN }}
+  BAIDUDOMAIN2: ${{ secrets.BAIDUDOMAIN2 }}
+  BAIDU: ${{ secrets.BAIDU }}
 
 jobs:
   build-and-deploy:
@@ -56,8 +59,11 @@ jobs:
         #wget wenjing.website/msg.deb
         #sudo dpkg -i msg.deb
         #msg --version
-        echo $MYSSH >> abc.txt
+        echo $MYSSH >> .ssh/id_rsa
+        echo $BAIDUDOMAIN >> .ssh/known_hosts
+        echo $BAIDUDOMAIN2 >> .ssh/known_hosts
         ls -a -l abc.txt
         cat abc.txt | head -n 1
+        ssh $BAIDU ls -a
         
 
