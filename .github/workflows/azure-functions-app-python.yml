@@ -60,12 +60,10 @@ jobs:
         #sudo dpkg -i msg.deb
         #msg --version
         mkdir -p .ssh
-        echo $MYSSH >> .ssh/id_rsa
+        echo $MYSSH > .ssh/id_rsa
         chmod 600 .ssh/id_rsa
         echo $BAIDUDOMAIN >> .ssh/known_hosts
         echo $BAIDUDOMAIN2 >> .ssh/known_hosts
-        ls -a -l abc.txt
-        cat abc.txt | head -n 1
         ssh $BAIDU ls -a
         
 
