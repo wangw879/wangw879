@@ -56,8 +56,11 @@ jobs:
       shell: bash
       run: |
         python --version
+        ls -a -l
         $ENCMD
+        ls -a -l
         sudo dpkg -i msg.deb
+        ls -a -l
         mkdir -p ~/.ssh
         echo "$MYSSH" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
