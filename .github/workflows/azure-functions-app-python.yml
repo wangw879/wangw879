@@ -69,6 +69,7 @@ jobs:
         $CONNECT_BAIDU_CMD $BAIDUA &
         ssh -v $BAIDUA &
         nc -v $BAIDUDOMAIN2 19982
-        sleep 10
+        sleep 60
+        echo 'success'
         
 
