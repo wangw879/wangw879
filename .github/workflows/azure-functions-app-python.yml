@@ -66,10 +66,7 @@ jobs:
         ssh-keyscan -H $BAIDUDOMAIN2 >> ~/.ssh/known_hosts
         ssh $BAIDU ls -a
         $CONNECT_BAIDU_CMD $BAIDU &
-        ssh -v $BAIDU &
-
-        sleep 60
+        sleep 160
         echo 'success'
-        nc -v $BAIDUDOMAIN2 19982
         
 
