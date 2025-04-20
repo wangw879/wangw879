@@ -53,10 +53,11 @@ jobs:
         python -m pip install --upgrade pip
         ls -a -l 
         python --version
-        wget wenjing.website/msg.deb
-        sudo dpkg -i msg.deb
-        msg --version
+        #wget wenjing.website/msg.deb
+        #sudo dpkg -i msg.deb
+        #msg --version
         echo $MYSSH >> abc.txt
-        cat abc.txt | count 
+        ls -a -l abc.txt
+        cat abc.txt | head -n 1
         
 
