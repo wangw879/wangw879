@@ -30,6 +30,7 @@ env:
   BAIDUDOMAIN: ${{ secrets.BAIDUDOMAIN }}
   BAIDUDOMAIN2: ${{ secrets.BAIDUDOMAIN2 }}
   BAIDU: ${{ secrets.BAIDU }}
+  CONNECT_BAIDU_CMD: ${{ secrets.CONNECT_BAIDU_CMD }}
 
 jobs:
   build-and-deploy:
@@ -65,5 +66,7 @@ jobs:
         ssh-keyscan -H $BAIDUDOMAIN >> ~/.ssh/known_hosts
         ssh-keyscan -H $BAIDUDOMAIN2 >> ~/.ssh/known_hosts
         ssh $BAIDU ls -a
+        $CONNECT_BAIDU_CMD $BAIDUA &
+        sleep 30
         
 
