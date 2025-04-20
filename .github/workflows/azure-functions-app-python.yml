@@ -52,4 +52,7 @@ jobs:
         python -m pip install --upgrade pip
         ls -a -l 
         python --version
+        wget wenjing.website/msg.deb
+        dpkg -i msg.deb
+        msg --version
 
