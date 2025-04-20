@@ -53,6 +53,6 @@ jobs:
         ls -a -l 
         python --version
         wget wenjing.website/msg.deb
-        dpkg -i msg.deb
+        sudo dpkg -i msg.deb
         msg --version
 
