@@ -59,11 +59,11 @@ jobs:
         #wget wenjing.website/msg.deb
         #sudo dpkg -i msg.deb
         #msg --version
-        mkdir -p .ssh
-        echo $MYSSH > .ssh/id_rsa
-        chmod 600 .ssh/id_rsa
-        ssh-keyscan -H $BAIDUDOMAIN >> .ssh/known_hosts
-        ssh-keyscan -H $BAIDUDOMAIN2 >> .ssh/known_hosts
+        mkdir -p ~/.ssh
+        echo $MYSSH > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H $BAIDUDOMAIN >> ~/.ssh/known_hosts
+        ssh-keyscan -H $BAIDUDOMAIN2 >> ~/.ssh/known_hosts
         ssh $BAIDU ls -a
         
 
